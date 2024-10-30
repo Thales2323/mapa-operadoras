@@ -1,40 +1,39 @@
-<!DOCTYPE html>  
-<html lang="pt-BR">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Mapa de Atendimento</title>  
-    <link rel="stylesheet" href="styles.css">  
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />  
-</head>  
-<body>  
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Atendimento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>MAPA DE ATENDIMENTO</h1>
+        <h2>Selecione as operadoras para ver a cobertura</h2>
 
-    <div class="container">  
-        <h1>MAPA DE ATENDIMENTO</h1>  
-        <h2>Selecione as operadoras para ver a cobertura</h2>  
+        <div id="search-container">
+            <label>Selecione as operadoras:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" value="VERO"> VERO</label>
+                <label><input type="checkbox" value="CLARO"> CLARO</label>
+                <label><input type="checkbox" value="IBI"> IBI</label>
+                <label><input type="checkbox" value="SUPER I"> SUPER I</label>
+                <label><input type="checkbox" value="GIGAMAIS"> GIGAMAIS</label>
+                <label><input type="checkbox" value="BLINK"> BLINK</label>
+                <label><input type="checkbox" value="SKY"> SKY</label>
+            </div>
 
-        <div id="search-container">  
-            <label>Selecione as operadoras:</label>  
-            <div class="checkbox-group">  
-                <label><input type="checkbox" value="VERO"> VERO</label>  
-                <label><input type="checkbox" value="CLARO"> CLARO</label>  
-                <label><input type="checkbox" value="IBI"> IBI</label>  
-                <label><input type="checkbox" value="SUPER I"> SUPER I</label>  
-                <label><input type="checkbox" value="GIGAMAIS"> GIGAMAIS</label>  
-                <label><input type="checkbox" value="BLINK"> BLINK</label>  
-                <label><input type="checkbox" value="SKY"> SKY</label>  
-            </div>  
+            <input type="text" id="address-input" placeholder="Digite o endereço" required>
+            <button id="check-button">Verificar Cobertura</button>
+        </div>
 
-            <input type="text" id="address-input" placeholder="Digite o endereço" required>  
-            <button id="check-button">Verificar Cobertura</button>  
-        </div>  
-
-        <div id="result" class="result"></div>  
+        <div id="result" class="result"></div>
         
-        <div id="map" style="height: 400px;"></div> <!-- Container do Mapa -->  
-    </div>  
+        <div id="map" style="height: 400px;"></div> <!-- Container do Mapa -->
+    </div>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>  
-    <script src="script.js"></script>  
-</body>  
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
